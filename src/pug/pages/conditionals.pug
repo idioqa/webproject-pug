@@ -1,0 +1,32 @@
+extends ../layout/main
+
+block variables
+    - var title = "Главная страница"
+
+block content
+    main.main
+        .container
+          h1.main__title Conditionals
+          p.main__text Pug’s first-class conditional syntax allows for optional parentheses.
+          p.main__example-title pug:
+          pre.main__example
+            |- var user = { description: 'foo bar baz' }
+            |- var authorised = false
+            |#user
+            |   if user.description
+            |     h2.green Description
+            |     p.description= user.description
+            |   else if authorised
+            |     h2.blue Description
+            |     p.description.
+            |       User has no description,
+            |       why not add one...
+            |   else
+            |     h2.red Description
+            |     p.description User has no description
+          p.main__example-title html:
+          pre.main__example
+            |&lt;div id="user">
+            |   &lt;h2 class="green">Description&lt;/h2>
+            |   &lt;p class="description">foo bar baz&lt;/p>
+            |&lt;/div>

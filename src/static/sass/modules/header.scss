@@ -1,0 +1,96 @@
+.header {
+  background-color: $theme-color;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 30px;
+  &__navs {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #f5ddd8;
+    border-radius: 10px;
+    padding: 30px 40px;
+    width: 450px;
+  }
+}
+
+.header-nav {
+  &__list {
+    display: flex;
+    font-size: 22px;  
+    position: relative;
+  }
+  &__item {
+    margin-right: 40px;
+    & > * {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    color: white;
+    height: 50px;
+    display: block;
+    &--active {
+      color: rgb(70, 3, 3);
+    }
+    &--color-blk {
+      color: black;
+    }
+  }
+  &__link:hover {
+    color: rgb(218, 177, 177);
+  }
+}
+
+.modal {
+  display: none;
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0px;
+    line-height: 30px;
+    input {
+      padding-left: 5px;
+      margin-left: 5px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+    }
+    input:hover, input:focus, input:active {
+      outline: antiquewhite solid 3px;
+    }
+    input:invalid {
+      outline: red solid 1px;
+    }
+  }
+  &__btn {
+    margin-top: 5px;
+    padding: 5px 0;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    &:hover, &:focus, &:active {
+      background-color: antiquewhite;
+    }
+  }
+  &__background {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+}
+
+

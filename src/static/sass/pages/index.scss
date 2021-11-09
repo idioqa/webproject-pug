@@ -1,0 +1,39 @@
+.container {
+  margin : 0 auto;
+  width: 1200px;
+}
+.main {
+  min-height: calc(100vh - 200px);
+  &__title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    &--medium {
+      font-size: 38px;
+    }
+    &--small {
+      font-size: 30px;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__img {
+    width: 200px;
+    float: right;
+  }
+  &__link {
+    font-style: italic;
+    text-decoration: underline;
+  }
+  &__example {
+    margin-bottom: 30px;
+    padding: 20px 20px;
+    background-color: $examples-color;
+    border-radius: 5px;
+    line-height: 1.4;
+  }
+  &__example-title {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,84 @@
+@import 'fonts.scss';
+@import 'vars.scss';
+@import 'libs.scss';
+
+html {
+    line-height: 1;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Arvo', 'Times New Roman',Times ,serif;
+    margin: 0;
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+ul,li {
+    margin: 0;
+    padding : 0;
+    list-style-type: none;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+{
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none;
+}
+
+section {
+    position: relative;
+}
+
+input,
+select,
+button
+{
+    outline: none;
+}
+
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+
+//МОДУЛИ
+//Стили шапки
+@import 'modules/header.scss';
+
+//Стили подавала
+@import 'modules/footer.scss';
+
+//Стили меню
+@import 'modules/main.scss';
+
+
+//Страницы
+//Стили главное страницы
+@import 'pages/index.scss';
+
+@import 'vars.scss';
+
+@import 'modules/form.scss';
+    
+

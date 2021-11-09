@@ -1,0 +1,40 @@
+extends ../layout/main
+
+block variables
+    - var title = "Главная страница"
+
+block content
+    main.main
+        .container
+            img(src="static/img/content/pug.svg" alt="pug logo").main__img
+            h1.main__title Pug 
+            p.main__text Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for #[a(href="https://nodejs.org/en/").main__link  Node.js ] and browsers.
+            h2.main__title.main__title--medium Installation
+            h3.main__title.main__title--small Package
+            p.main__text To use Pug in your own JavaScript projects:
+            .main__example $ npm install pug
+            h3.main__title.main__title--small Command Line
+            p.main__text After installing the latest version of Node.js, install with:
+            .main__example $ npm install pug-cli -g
+            p.main__text and run with
+            .main__example $ pug --help
+            h2.main__title.main__title--medium Syntax
+            p.main__text Pug is a clean, whitespace sensitive syntax for writing HTML. Here is a simple example:
+            pre.main__example 
+                |  doctype html
+                |   html(lang="en")
+                |       head
+                |           title= pageTitle
+                |           script(type='text/javascript').
+                |               if (foo) bar(1 + 5)
+                |       body
+                |           h1 Pug - node template engine
+                |           #container.col
+                |               if youAreUsingPug
+                |                   p You are amazing
+                |               else
+                |                   p Get on it!
+                |               p.
+                |                   Pug is a terse and simple templating language with a
+                |                   strong focus on performance and powerful features.
+                

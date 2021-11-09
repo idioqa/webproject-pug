@@ -1,0 +1,43 @@
+extends ../layout/main
+
+block variables
+    - var title = "Attributes"
+
+block content
+    main.main
+        .container
+          h1.main__title Attributes
+          p.main__text Tag attributes look similar to HTML (with optional commas), but their values are just regular JavaScript.
+          p.main__example-title Pug:
+          pre.main__example 
+            |a(href='google.com') Google
+            |  a(class='button' href='google.com') Google
+            |  a(class='button', href='google.com') Google
+          p.main__example-title html:
+          pre.main__example 
+            |&lt;a href="google.com">Google&lt;/a>
+            |  &lt;a class="button" href="google.com">Google&lt;/a>
+            |  &lt;a class="button" href="google.com">Google&lt;/a>
+          p.main__text Normal JavaScript expressions work fine, too:
+          pre.main__example 
+            |- var authenticated = true
+            |  body(class=authenticated ? 'authed' : 'anon')
+          h2.main__title.main__title--medium Multiline Attributes
+          p.main__text If you have many attributes, you can also spread them across many lines:
+          pre.main__example 
+            |input(
+            |   type='checkbox'
+            |   name='agreement'
+            |   checked
+            |  )
+          p.main__text If your JavaScript runtime supports ES2015 template strings (including Node.js/io.js 1.0.0 and later), you can use that syntax for attributes. This is really useful for attributes with really long values:
+          pre.main__example 
+            |input(data-json=`
+            |   {
+            |     "very-long": "piece of ",
+            |    "data": true
+            |   }
+            |  `)
+            
+          
+

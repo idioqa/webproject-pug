@@ -1,0 +1,68 @@
+extends ../layout/main
+
+block variables
+    - var title = "Главная страница"
+
+block content
+    main.main
+        .container
+          h1.main__title Includes
+          p.main__text Includes allow you to insert the contents of one Pug file into another.
+          pre.main__example
+            |//- index.pug
+            |doctype html
+            |html
+            |   include includes/head.pug
+            |   body
+            |     h1 My Site
+            |     p Welcome to my super lame site.
+            |     include includes/foot.pug
+          p.main__text If the path is absolute (e.g., include /root.pug), it is resolved by prepending options.basedir. Otherwise, paths are resolved relative to the current file being compiled.
+          p.main__text If no file extension is given, .pug is automatically appended to the file name.
+          h2.main__title.main__title--medium Including Plain Text
+          p.main__text Including non-Pug files simply includes their raw text.
+          pre.main__example
+            |//- index.pug
+            |doctype html
+            |html
+            |   head
+            |     style
+            |       include style.css
+            |   body
+            |     h1 My Site
+            |     p Welcome to my super lame site.
+            |     script
+            |       include script.js
+          pre.main__example
+            |/* style.css */
+            |h1 {
+            |   color: red;
+            |}
+          pre.main__example
+            |// script.js
+            |console.log('You are awesome');
+          p.main__example-title html:
+          pre.main__example
+            |&lt;!DOCTYPE html>
+            |&lt;html>
+            |
+            |&lt;head>
+            |   &lt;style>
+            |     /* style.css */
+            |
+            |     h1 {
+            |       color: red;
+            |     }
+            |   &lt;/style>
+            |&lt;/head>
+            |
+            |&lt;body>
+            |   &lt;h1>My Site&lt;/h1>
+            |   &lt;p>Welcome to my super lame site.&lt;/p>
+            |   &lt;script>
+            |     // script.js
+            |     console.log('You are awesome');
+            |   &lt;/script>
+            |&lt;/body>
+            |
+            |&lt;/html>
